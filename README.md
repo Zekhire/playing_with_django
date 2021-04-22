@@ -8,5 +8,5 @@ sudo docker run -dt -v "$(pwd)":/usr/src/app/ -p 8080:8080 --name playing_with_d
 
 
 
-sudo docker start -v "$(pwd)"/:/usr/src/app/ -p 8080:8080 playing_with_django_container
+sudo docker start -p 8080:8080 playing_with_django_container
 sudo docker exec -it playing_with_django_container /bin/bash
