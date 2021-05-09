@@ -4,8 +4,14 @@
 </head>
 
 <body>
-
-    {% for post in posts %}
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% for post in posts reversed %}
     <div>
         <h1>{{ post.title }}</h1>
         <p>{{ post.author }}</p>
